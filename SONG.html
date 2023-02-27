@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music World</title>
+    <link rel="stylesheet" href="song.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body style="background-color: darkgray;">
+    <div class="song">
+    <div class="main">
+        <!-- top-bar -->
+        <div class="top-bar">
+            <button onclick="sidebar()"><i class='bx bx-chevron-right'></i></button>
+            <div class="options">
+                <button><i class='bx bx-music'></i></button>
+                <button><i class='bx bxs-volume-low'></i></button>
+                <button><i class='bx bx-edit-alt'></i></button>
+            </div>
+            <button onclick="open_p()"><i class='bx bx-menu-alt-left'></i></button>
+        </div>
+        <div class="playing-part">
+            <div class="img">
+                <img src="rimages/ali zafar.jpg" alt="img">
+            </div>
+        </div>
+        <!-- control-part -->
+        <div class="control-part">
+            <div class="song-title">
+                <p>Song title</p>
+                <p>Atrist name</p>
+            </div>
+            <div class="control-buttons">
+                <div class="range-slider">
+                    <input type="range" min="0" max="100" id="slider" value="0">
+                    <p>3:00</p>
+                </div>
+                <div class="main-btns">
+                    <button id="previous"><i class='bx bx-skip-previous'></i></button>
+                    <button id="play-btn"><i class='bx bx-play'></i></button>
+                    <button id="previous"><i class='bx bx-skip-next'></i></button>
+
+                </div>
+            </div>
+        </div>
+        <!-- playlist-song -->
+        <div class="playlist">
+            <div class="p-song">
+                <p id="p-title">Song Name</p>
+                <audio src="raudio/03 Tera Hua - Loveratri.mp3" controls></audio> 
+                <button ><i class='bx bx-play'></i></button>
+            </div>
+            <div class="p-song active-song">
+                <p id="p-title">Song Name</p>
+                <audio src="raudio/03 Tera Hua - Loveratri.mp3" controls></audio> 
+                <button ><i class='bx bx-play'></i></button>
+            </div>
+            <div class="p-song">
+                <p id="p-title">Song Name</p>
+                <audio src="raudio/03 Tera Hua - Loveratri.mp3" controls></audio> 
+                <button><i class='bx bx-play'></i></button>
+            </div>
+            <div class="p-song">
+                <p id="p-title">Song Name</p>
+                <audio src="raudio/03 Tera Hua - Loveratri.mp3" controls></audio> 
+                <button ><i class='bx bx-play'></i></button>
+            </div>
+           
+        </div>
+    </div>
+    </div>
+    <!-- javascript part -->
+    <script>
+        let playlist = document.querySelector('.playlist');
+        let options = document.querySelector('.options');
+
+        function open_p(){
+            playlist.classList.toggle('active')
+
+        }
+        function sidebar(){
+            options.classList.toggle('active2')
+
+        }
+    </script>
+</body>
+</html>
